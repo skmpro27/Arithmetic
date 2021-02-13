@@ -35,5 +35,22 @@ do
 		fi
 	done
 done
+echo ${arr[@]}
+echo
 
+check=1
+while [ $check -eq 1 ]
+do
+	check=0
+	for (( i=0; i < ${#arr[@]}-1; i+=1 ))
+	do
+		if [ ${arr[$i]} -gt ${arr[$i+1]} ]
+		then
+			temp=${arr[$i]}
+			arr[$i]=${arr[$i+1]}
+			arr[$i+1]=$temp
+			check=1
+		fi
+	done
+done
 echo ${arr[@]}
