@@ -8,3 +8,4 @@ read -p "Enter 3rd number " num3
 compute1=$(( num1+num2*num3 ))
 compute2=$(( num1*num2+num3 ))
 compute3=$(( num3+num1/num2 ))
+compute4=$(( num1%num2+num3 ))
